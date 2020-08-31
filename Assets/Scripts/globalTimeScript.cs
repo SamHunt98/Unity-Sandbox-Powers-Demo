@@ -15,7 +15,7 @@ public class globalTimeScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         //if(isTimeStopped && !hasDoneTimeStopCalculation)
@@ -31,8 +31,8 @@ public class globalTimeScript : MonoBehaviour
 
     public void callAllTimeStops()
     {
-        Debug.Log("epic");
-        timeMoveTest[] listToStop = GameObject.FindObjectsOfType<timeMoveTest>();
+
+        timeMoveTest[] listToStop = GameObject.FindObjectsOfType<timeMoveTest>(); //would usually populate this list at the start of the level in order to save loading it every time
         foreach(timeMoveTest a in listToStop)
         {
             a.onFreezeTime();
